@@ -1,0 +1,61 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 0;
+  transition: opacity 0.3s, visibility 0.3s;
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 880px;
+  height: 100%;
+  max-height: 880px;
+  padding: 128px;
+  background-color: var(--color-primary-light);
+  border-radius: 32px;
+  overflow-y: auto;
+
+  &__close-btn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    color: var(--color-primary-dark);
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  &__text {
+    margin-bottom: 72px;
+    color: var(--color-brand-dark);
+    text-align: center;
+  }
+
+  &__form-field {
+    margin-bottom: 32px;
+  }
+
+  &__button {
+    display: block;
+    margin: 0 auto 24px;
+  }
+}
